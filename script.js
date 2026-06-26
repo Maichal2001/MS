@@ -7,6 +7,12 @@ function playMusic() {
         });
     }
 }
+window.addEventListener("click", function () {
+    const music = document.getElementById("bgMusic");
+
+    music.play().catch(err => console.log(err));
+
+}, { once: true });
 
 window.onload = function () {
 
