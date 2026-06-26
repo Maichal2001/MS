@@ -2,7 +2,7 @@ function playMusic(){
     document.getElementById("bgMusic").play();
 }
 
-const startDate = new Date("2024-01-01");
+const startDate = new Date("2021-02-06");
 
 const today = new Date();
 
@@ -12,3 +12,25 @@ const days = Math.floor(difference / (1000 * 60 * 60 * 24));
 
 document.getElementById("loveDays").innerHTML =
 days + " Days Together";
+setTimeout(() => {
+
+document.getElementById("fireworks").style.display="block";
+
+document.getElementById("finalMessage").style.display="block";
+
+const container=document.getElementById("fireworks");
+
+const fw=new Fireworks.default(container,{
+autostart:true,
+speed:3,
+acceleration:1.05,
+friction:0.98,
+gravity:1.5,
+particles:120,
+traceLength:4,
+explosion:8
+});
+
+fw.start();
+
+},60000); // Fireworks after 60 seconds
