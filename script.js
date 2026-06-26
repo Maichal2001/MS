@@ -49,6 +49,6 @@ window.onload = function () {
 
         fw.start();
 
-    }, 60000);
+    }, 1000);
 
 };
