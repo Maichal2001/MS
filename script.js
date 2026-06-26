@@ -1,36 +1,48 @@
-function playMusic(){
-    document.getElementById("bgMusic").play();
+// Play background music
+function playMusic() {
+    const music = document.getElementById("bgMusic");
+    if (music) {
+        music.play().catch(() => {
+            console.log("Autoplay blocked by browser.");
+        });
+    }
 }
 
-const startDate = new Date("2021-02-06");
+window.onload = function () {
 
-const today = new Date();
+    // Love counter
+    const startDate = new Date("2021-02-06");
+    const today = new Date();
 
-const difference = today - startDate;
+    const difference = today - startDate;
 
-const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
 
-document.getElementById("loveDays").innerHTML =
-days + " Days Together";
-setTimeout(() => {
+    document.getElementById("loveDays").innerHTML =
+        days + " Days Together";
 
-document.getElementById("fireworks").style.display="block";
+    // Fireworks after 60 seconds
+    setTimeout(() => {
 
-document.getElementById("finalMessage").style.display="block";
+        document.getElementById("fireworks").style.display = "block";
 
-const container=document.getElementById("fireworks");
+        document.getElementById("finalMessage").style.display = "block";
 
-const fw=new Fireworks.default(container,{
-autostart:true,
-speed:3,
-acceleration:1.05,
-friction:0.98,
-gravity:1.5,
-particles:120,
-traceLength:4,
-explosion:8
-});
+        const container = document.getElementById("fireworks");
 
-fw.start();
+        const fw = new Fireworks.default(container, {
+            autostart: true,
+            speed: 3,
+            acceleration: 1.05,
+            friction: 0.98,
+            gravity: 1.5,
+            particles: 120,
+            traceLength: 4,
+            explosion: 8
+        });
 
-},60000); // Fireworks after 60 seconds
+        fw.start();
+
+    }, 60000);
+
+};
