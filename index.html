@@ -1,56 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Shanu ❤️</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Shanu ❤️</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="container">
 
-    <h1 class="title">Happy Birthday My Love [SHANU]❤️</h1>
+    <h1 class="title">Happy Birthday My Love ❤️ SHANVI ❤️</h1>
 
     <p class="message">
-        Every moment with you is special.  
-        You are the best thing in my life.  
-        I love you forever ❤️
+        Every moment with you is special.<br>
+        You are the best thing in my life.<br>
+        I Love You Forever ❤️
     </p>
 
-    <button onclick="playMusic()" class="btn">
-        Play Music 🎵
+    <button class="btn" onclick="playMusic()">
+        🎵 Play Music
     </button>
-  <div id="fireworks"></div>
 
-<div id="finalMessage">
-    <h1>❤️ Happy Birthday Shanvi ❤️</h1>
-    <h2>You are my Forever 🌹</h2>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.10.7/dist/index.umd.js"></script>
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+    <!-- Photo Gallery -->
     <div class="gallery">
-        <img src="photo1.jpg">
-        <img src="photo2.jpg">
-        <img src="photo3.jpg">
+        <img src="photo1.jpg" alt="Photo 1">
+        <img src="photo2.jpg" alt="Photo 2">
+        <img src="photo3.jpg" alt="Photo 3">
     </div>
 
+    <!-- Love Counter -->
     <div class="counter">
-        Together Since ❤️
+        <h3>Together Since ❤️</h3>
         <h2 id="loveDays"></h2>
     </div>
 
+    <!-- Message -->
     <div class="final-message">
         <h2>You are my happiness 🌸</h2>
     </div>
 
 </div>
 
-<audio id="bgMusic" src="music.mp3"></audio>
+<!-- Fireworks Container -->
+<div id="fireworks"></div>
 
+<!-- Final Surprise -->
+<div id="finalMessage" style="display:none;">
+    <h1>❤️ Happy Birthday Shanvi ❤️</h1>
+    <h2>I Love You Forever 🌹</h2>
+</div>
+
+<!-- Background Music -->
+<audio id="bgMusic" src="music.mp3" loop></audio>
+
+<!-- Fireworks Library -->
+<script src="https://cdn.jsdelivr.net/npm/fireworks-js@2/dist/index.umd.js"></script>
+
+<!-- Your JavaScript -->
 <script src="script.js"></script>
 
 </body>
