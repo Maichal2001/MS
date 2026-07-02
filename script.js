@@ -97,7 +97,7 @@ window.onload = function () {
 
         const fireworks = new Fireworks.default(fwContainer, {
 
-            speed: 3,
+            speed: 2,
 
             acceleration: 1.05,
 
@@ -121,8 +121,33 @@ window.onload = function () {
 
             fireworks.stop();
 
-        }, 10000);
+        }, 100000);
 
     }, 1000);
 
 };
+// Birthday Countdown
+const birthday = new Date("2026-08-07T00:00:00");
+
+function updateCountdown() {
+
+    const now = new Date();
+    const diff = birthday - now;
+
+    if (diff <= 0) {
+        document.getElementById("countdown").innerHTML =
+            "🎉 Happy Birthday Shanvi! ❤️";
+        return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("countdown").innerHTML =
+        `${days} Days ${hours} Hours ${minutes} Minutes ${seconds} Seconds`;
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
