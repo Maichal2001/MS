@@ -172,12 +172,12 @@ opacity:0;
 }
 
 .left-msg{
-    left: -170px;
+    left: 170px;
     text-align: right;
 }
 
 .right-msg{
-    right: -170px;
+    right: 170px;
     text-align: left;
 }
 
