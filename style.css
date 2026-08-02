@@ -93,12 +93,12 @@ animation:zoom 2s infinite;
 }
 
 .counter{
-    margin-top:50px;
+    margin-top:150px;
     font-size:28px;
 }
 
 .final-message{
-    margin-top:100px;
+    margin-top:70px;
     font-size:30px;
     animation: pulse 2s infinite;
 }
